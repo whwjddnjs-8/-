@@ -1,0 +1,285 @@
+:root {
+	--primary-color: #3cb149;
+	--secondary-color: #1d8844;
+	--third-color: #434748;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+
+body {
+	background-color: #ffffff;
+	color: #333333;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* 전체적인 구조 잡기 */
+.wrap {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+header {
+	width: 100%;
+	height: 100px;
+	background-color: var(--primary-color);
+}
+
+.slides {
+	width: 100%;
+	height: 300px;
+}
+
+.contents {
+	width: 100%;
+	height: 200px;
+}
+
+footer {
+	width: 100%;
+	height: 100px;
+	border: 1px solid #ddd;
+}
+
+/* Header */
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+header .logo-area {
+	width: 200px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 50px;
+}
+
+header .logo-area img {
+	width: 200px;
+	height: 40px;
+}
+
+header .menu-area {
+	width: 600px;
+	height: 100px;
+}
+
+header .menu-area ul {
+	width: 600px;
+	height: 100px;
+	display: flex;
+}
+
+header .menu-area ul li {
+	width: 150px;
+	text-align: center;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.25s;
+}
+
+header .menu-area ul li:hover {
+	background-color: rgba(0, 0, 0, 0.15);
+	color: #fff;
+}
+
+header .menu-area ul li a {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.sub-menu-area {
+	width: 100%;
+	display: none;
+	position: absolute;
+	z-index: 1;
+	background-color: #fff;
+}
+
+.sub-menu {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.sub-menu ul {
+	width: 150px;
+	text-align: center;
+}
+
+.sub-menu ul li {
+	padding: 10px;
+}
+
+.sub-menu ul li:hover {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Slides */
+.slides {
+	position: relative;
+	overflow: hidden;
+}
+
+.slides a {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.slides a span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	background-color: var(--secondary-color);
+	padding: 20px;
+	letter-spacing: 2px;
+	transition: 0.35s;
+}
+
+.slides a span:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Contents */
+.contents {
+	display: flex;
+	gap: 10px;
+}
+
+.notice-area,
+.gallery-area,
+.banner-area {
+	flex: 1;
+	margin: 5px 0;
+}
+
+.notice-area h3,
+.gallery-area h3 {
+	display: inline-block;
+	padding: 7px 10px;
+	background-color: var(--primary-color);
+	font-size: 18px;
+}
+
+.notice-area ul,
+.gallery-area ul {
+	width: 100%;
+	height: 148px;
+	/* margin-top: 10px; */
+}
+
+.notice-area ul li {
+	padding: 7px;
+	font-weight: bold;
+	height: calc(148px / 4);
+}
+
+.notice-area ul li:nth-child(2n) {
+	background-color: var(--primary-color);
+}
+
+.notice-area ul li:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.notice-area ul li span {
+	float: right;
+	font-weight: normal;
+}
+
+.gallery-area ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 148px;
+
+}
+
+.gallery-area ul li {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Footer */
+footer {
+	display: flex;
+	justify-content: space-around;
+}
+
+.logo_area,
+.copy_right_area,
+.family_site_area {
+	/* flex: 1; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.copy_right_area p {
+	font-size: 14px;
+}
+.family_site_area select {
+	padding: 2px;
+	outline: none;
+}
+.family_site_area a {
+	margin-left: 5px;;
+	font-size: 14px;
+	padding: 2px 10px;
+	background-color: var(--third-color);
+	color: #fff;
+
+}
+.banner-area {
+	flex: 1;
+	background-image: url(../images/banner.jpg);
+}
+
+/* Modal */
+.modal_popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	width: 500px;
+	padding: 30px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+
+.modal_content h3 {
+	margin-bottom: 20px;
+}
+
+.modal_close_btn {
+	margin-top: 20px;
+	border: none;
+	display: block;
+	width: 100%;
+	padding: 8px 15px;
+	background-color: var(--primary-color);
+	color: #fff;
+	transition: 0.35s;
+}
+
+.modal_close_btn:hover {
+	background-color: var(--third-color);
+}
