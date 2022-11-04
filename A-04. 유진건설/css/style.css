@@ -1,0 +1,295 @@
+/* 초기셋팅 */
+:root {
+    --primary-color: #ff5050;
+    --secondary-color: #ffc000;
+    --third-color: #5b9bd5
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: none
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+    border: 0;
+}
+
+/* 전체 구조 잡기 */
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+.slides {
+    width: 100%;
+    height: 300px;
+}
+
+.contents {
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+header .logo_area {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo_area img {
+    width: 200px;
+    height: 40px;
+}
+
+header .menu_area {
+    width: 600px;
+}
+
+header .menu_area ul.main_menu {
+    display: flex;
+    height: 100px;
+}
+
+header .menu_area ul.main_menu li {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu_area ul.main_menu li a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff
+}
+
+header .menu_area ul.main_menu li:hover {
+    background-color: rgb(198, 63, 63);
+}
+
+.menu_area.sub {
+    background-color: #fff;
+    width: 100%;
+    padding: 8px 0;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    z-index: 1;
+}
+
+.menu_area.sub .sub_menu {
+    display: flex;
+}
+
+
+.menu_area.sub .sub_menu ul {
+    width: 150px;
+    text-align: center;
+}
+
+.menu_area.sub .sub_menu ul li {
+    padding: 8px;
+}
+
+.menu_area.sub .sub_menu ul li a {
+    font-size: 18px;
+}
+
+.menu_area.sub .sub_menu ul li:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Slides */
+.slides {
+    position: relative;
+    overflow: hidden;
+}
+
+.slides a {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slides a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+/* Contents */
+.contents {
+    display: flex;
+    margin-top: 10px;
+    grid-gap: 10px
+}
+
+.notice_area {
+    width: 35%;
+}
+
+.notice_area h3,
+.gallery_area h3 {
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: var(--secondary-color);
+}
+
+.notice_area ul.notice li {
+    padding: 6px 8px;
+
+}
+
+.notice_area ul.notice li:nth-child(2n) {
+    background-color: rgba(255, 192, 0, 0.28);
+}
+
+.notice_area ul.notice li a {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.notice_area ul.notice li span {
+    float: right;
+    font-size: 13px;
+}
+
+.gallery_area {
+    width: 35%;
+
+}
+
+.gallery_area .gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery_area .gallery a {
+    flex: 1;
+    text-align: center;
+}
+
+.gallery_area .gallery a:hover img {
+    opacity: 0.5
+}
+
+.direct_area {
+    width: 30%;
+    background-image: url(../images/direct.jpg)
+}
+
+/* Footer */
+footer {
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .content_area {
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+footer .content_area ul {
+    display: flex;
+    grid-gap: 20px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px
+}
+
+footer .content_area p {
+    color: gray;
+    padding-top : 10px
+}
+
+footer .family_site {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .family_site select {
+    width: 150px
+}
+
+footer .family_site button {
+    border: none;
+    padding: 2px 10px;
+    margin-left: 5px;
+}
+
+/* Popup Layer */
+.popup_layer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    padding: 40px 30px;
+}
+
+.popup_content h3 {
+    margin-bottom: 20px;
+}
+
+.popup_content p {
+    margin-bottom: 20px;
+}
+
+.popup_content button {
+    width: 100%;
+    border: none;
+    padding: 8px;
+    transition: 0.35s;
+    border-radius: 10px;
+}
+
+.popup_content button:hover {
+    background-color: var(--third-color);
+}
