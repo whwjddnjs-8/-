@@ -219,9 +219,20 @@ header .menu_area ul.main_menu li:hover {
 
 .direct_area {
     width: 30%;
-    background-image: url(../images/direct.jpg)
+    background-image: url(../images/direct.jpg);
+    position: relative;
 }
 
+.direct_area a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 18px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
 /* Footer */
 footer {
     background-color: #ddd;
@@ -288,6 +299,7 @@ footer .family_site button {
     padding: 8px;
     transition: 0.35s;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .popup_content button:hover {
