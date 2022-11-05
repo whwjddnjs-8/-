@@ -1,0 +1,278 @@
+@charset 'utf-8';
+
+:root {
+    --primary-color: #0076BE;
+    --secondary-color: #E66B27;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    color: #333333;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 전체 구조 */
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+.slides {
+    width: 100%;
+    height: 300px;
+}
+
+.contents {
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    z-index: 100;
+    position: relative;
+}
+
+header .logo_area {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_area img {
+    width: 200px;
+    height: 40px;
+}
+
+.menu_area {
+    width: 600px;
+    height: inherit;
+}
+
+.menu_area ul.main_menu {
+    display: flex;
+    text-align: center;
+    height: inherit;
+}
+
+.menu_area ul.main_menu > li {
+    width: 150px;
+    height: inherit;
+    font-size: 20px;
+    color: #fff;
+}
+
+.menu_area ul.main_menu > li:hover {
+    background-color: #4393c4;
+    color: #333;
+}
+
+.menu_area ul.main_menu > li > a {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    line-height: 100px;
+}
+
+/* Sub Menu */
+
+.menu_area ul.sub_menu {
+    display: none;
+    border-bottom: 1px solid #ddd;
+    height: 180px;
+    background-color: #acc2d0;
+}
+
+.menu_area ul.main_menu li:first-child ul.sub_menu {
+    border-left: 1px solid #ddd;
+}
+
+.menu_area ul.main_menu li:last-child ul.sub_menu {
+    border-right: 1px solid #ddd;
+}
+
+.menu_area ul.sub_menu li {
+    padding: 8px;
+    color: #333;
+}
+
+.menu_area ul.sub_menu li:hover {
+    background-color: #4393c4;
+    color: #333;
+}
+
+
+/* Slide Area */
+.slides {
+    position: relative;
+    overflow: hidden;
+}
+
+.slides a {
+    position: absolute;
+}
+
+/* Contents Area */
+.contents {
+    display: flex;
+    margin-top: 10px;
+    grid-gap: 10px;
+}
+
+/* Tab Area */
+.tab_area {
+    width: 40%;
+}
+
+.tab_area .btn_area a {
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.tab_area .btn_area a.active {
+    background-color: #e8a47f;
+}
+
+.tab_area .btn_area a:hover {
+    background-color: #e8a47f;
+}
+
+/* Notice Area */
+.notice_area {
+    margin-top: 10px;
+}
+
+.notice_area ul li {
+    padding: 8px 5px;
+}
+
+.notice_area ul li:nth-child(2n) {
+    background-color: #e8a47f;
+}
+
+.notice_area ul li a {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.notice_area ul li span {
+    font-size: 14px;
+    color: gray;
+    float: right;
+    margin-right: 3px;
+}
+
+/* Gallery Area */
+.gallery_area {
+    height: 148px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Banner Area */
+.banner_area {
+    width: 30%;
+    background-image: url(../imgaes/banner.jpg);
+}
+
+/* Direct Area */
+.direct_area {
+    width: 30%;
+    background-image: url(../imgaes/direct.jpg);
+}
+
+
+/* Footer Area */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ccc;
+}
+
+footer .logo_area {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer_content_area {
+    width: 400px;
+    margin-top: 25px
+}
+
+.footer_content_area .footer_menu ul {
+    display: flex;
+    grid-gap: 30px
+}
+
+.copy_right {
+    margin-top: 10px;
+    font-size: 14px;
+    color: gray
+}
+
+/* LAyer Popup */
+.layer_popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    width: 500px
+}
+
+.layer_content h3 {
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.layer_content p {
+    margin-bottom: 20px;
+}
+
+.layer_content .popup_close_btn {
+    float: right;
+    width: 100px;
+    border: none;
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.layer_content .popup_close_btn:hover {
+    background-color: var(--secondary-color);
+}
