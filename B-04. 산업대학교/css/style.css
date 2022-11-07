@@ -1,0 +1,274 @@
+@charset 'utf-8';
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    color: #222328;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.slides {
+    width: 100%;
+    height: 300px;
+}
+
+.contents {
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_wrapper {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_area img {
+    width: 200px;
+    height: 40px;
+}
+
+.menu_area {
+    width: 600px;
+    height: 100px;
+}
+
+.menu_area ul.main_menu {
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: inherit;
+    height: inherit;
+}
+
+.menu_area ul.main_menu li {
+    width: 150px;
+    height: inherit;
+}
+
+.menu_area ul.main_menu li:hover,
+.menu_area ul.main_menu li.active {
+    background-color: #ddd;
+}
+
+.menu_area ul.main_menu li a {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sub Menu */
+.sub_menu_area {
+    width: 100%;
+    background-color: #ddd;
+    padding-bottom: 50px;
+}
+
+.sub_menu_area .sub_menu_wrapper {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sub_menu_area .menu_area {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sub_menu_area .menu_area ul.sub_menu {
+    width: 150px;
+}
+
+.sub_menu_area .menu_area ul.sub_menu li {
+    padding: 8px;
+}
+
+.sub_menu_area .menu_area ul.sub_menu li:hover {
+    background-color: #fff;
+}
+
+/* Slides */
+.slides {
+    overflow: hidden;
+    position: relative;
+}
+
+.slides a {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Contents */
+.contents {
+    display: flex;
+    margin-top: 10px;
+    grid-gap: 10px;
+}
+
+.notice_area,
+.gallery_area {
+    width: 35%;
+}
+
+.notice_area h3,
+.gallery_area h3 {
+    background-color: #7fc9ff;
+    display: inline-block;
+    padding: 5px;
+}
+
+.notice_area ul {
+    margin-top: 10px;
+}
+
+.notice_area ul li {
+    padding: 8px 5px;
+}
+
+.notice_area ul li:nth-child(2n) {
+    background-color: #7fc9ff;
+}
+
+.notice_area ul li a {
+    font-weight: bold;
+}
+
+.notice_area ul li span {
+    float: right;
+}
+
+.gallery_area .gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+}
+
+.banner_area {
+    width: 30%;
+    background-image: url(../images/banner.jpg);
+    position: relative;
+}
+
+.banner_area a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.64);
+}
+
+/* Footer */
+footer {
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_wrapper {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between
+}
+
+.contents_area .footer_menu {
+    width: 70%;
+    display: flex;
+    font-weight: bold;
+}
+.contents_area .footer_menu li {
+    margin: 8px;
+}
+.family_site {
+    width: 30%;
+    margin-top: 20px;
+}
+.family_site select{
+    padding: 3px;
+}
+
+.family_site button {
+    padding: 2px 5px;
+    background-color: #b5b5b5;
+    border: none;
+    cursor: pointer;
+    
+}
+
+/* Layer Popup */
+.layer_popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    width: 500px;
+    padding: 30px;
+}
+
+.popup_content h3 {
+    margin-bottom: 20px;
+}
+
+.popup_content p {
+    margin-bottom: 20px;
+}
+
+.popup_content .popup_close_btn {
+    float: right;
+    border: none;
+    padding: 5px 15px;
+    background-color: #7fc9ff;
+    color: #222;
+    cursor: pointer;
+}
+
+.popup_content .popup_close_btn:hover {
+    background-color: #b5b5b5;
+
+}
