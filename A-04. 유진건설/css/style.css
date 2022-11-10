@@ -61,6 +61,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: var(--primary-color);
+    position: relative;
 }
 
 header .logo_area {
@@ -104,21 +105,26 @@ header .menu_area ul.main_menu li:hover {
 }
 
 .menu_area.sub {
+    /* 서브 메뉴 부분의 배경색 */
     background-color: #fff;
+    /* 서브 메뉴는 가로길이는 100%로 지정 */
     width: 100%;
-    padding: 8px 0;
+    /* 서브메뉴들을 오른쪽 끝으로 배치해서 메인메뉴 밑에 위치하도록 함*/
     display: flex;
     justify-content: flex-end;
+    /* header에 position : relative 속성을 주었기 때문에 서브메뉴는 숨겨지지않고 위에 뜬다*/
     position: absolute;
     z-index: 1;
 }
 
 .menu_area.sub .sub_menu {
+    /* 서브메뉴들을 가로정렬함 */
     display: flex;
 }
 
 
 .menu_area.sub .sub_menu ul {
+    /* 서브메뉴 하나하나는 width가 150px*/
     width: 150px;
     text-align: center;
 }
