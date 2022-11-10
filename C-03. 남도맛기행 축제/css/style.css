@@ -72,6 +72,7 @@ ul.main_menu {
 
 ul.main_menu > li {
     width: inherit;
+    /* 서브메뉴가 오른쪽으로 나타나게 하기 위해 relative */
     position: relative;
 }
 
@@ -81,6 +82,7 @@ ul.main_menu > li > a {
     height: 35px;
     display: inline-block;
     background-color: pink;
+    /* a태그 세로중앙정렬 */
     line-height: 35px;
 }
 
@@ -95,9 +97,11 @@ ul.main_menu > li.active>a {
 ul.sub_menu {
     width: inherit;
     font-size: 15px;
+    /*.mainmenu li의 자식요소로 오른쪽으로 띄우게함 */
     position: absolute;
     top: 0;
     left: 200px;
+    /* slide에 가려지지않도록 위로 띄움 */
     z-index: 1;
     display: none;
     background-color: #ddd;

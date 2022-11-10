@@ -16,18 +16,33 @@ a {
     color: inherit
 }
 
+/* 구조 */
+
 .wrap {
+    /* 정의서에 정해진 가로 길이 */
     width: 1000px;
     margin: 0 auto;
+    /* 헤더와 바디를 float했을 때 높이값을 찾아주기 위해서 처리 */
     overflow: hidden;
 }
 
 header {
+    /* 왼쪽으로 보냄 */
     float: left;
+    /* 가로, 세로길이 정해줌 */
     width: 200px;
+    /* 정의서에 정해진 세로길이 */
     height: 650px;
+    /* 헤더옆에 바디와의 약간의 간격을 줌*/
     margin-right: 10px;
     background-color: #dddddd;
+}
+
+.body_wrap {
+    /* 약간의 간격 10px생각해서 790px으로 정함*/
+    width: 790px;
+    /* 오른쪽으로 보냄*/
+    float: right;
 }
 
 .logo_area {
@@ -41,6 +56,7 @@ header {
 }
 
 .menu_area {
+    /* 가로길이는 100% */
     width: 100%;
     text-align: center;
 }
@@ -51,17 +67,20 @@ header {
 
 .menu_area .main_menu > li:hover {
     background-color: #222;
-    color: #fff
+    color: #fff;
 }
 
 .menu_area .main_menu > li > a {
+    /* a도 상위 li와 크기를 같게 맞춰줘야함 */
     width: 100%;
     display: inline-block;
     padding: 12px 0;
 }
 
 .sub_menu {
+    /* 처음엔 안보임 */
     display: none;
+    /* 서브메뉴 하나의 높이 정해줌 */
     height: 110px;
 }
 
@@ -73,6 +92,7 @@ header {
 }
 
 .sub_menu > li > a {
+    /* 서브메뉴의 한 메뉴에도 상위 li와 같은 크기로 정해줌 */
     width: 100%;
     display: inline-block;
     padding: 8px 0;
@@ -82,11 +102,7 @@ header {
     background-color: orange;
 }
 
-/* 구조 */
-.body_wrap {
-    width: 790px;
-    float: right;
-}
+
 
 /* Slides */
 .slides {
