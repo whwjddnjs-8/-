@@ -31,17 +31,13 @@ $(function () {
     $('.tab_area .btn_area a').click(function () {
         var idx = $(this).index();
 
+        // active : 탭이 눌렸다는것에 active클래스를 추가해서 디자인을 다르게함
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
 
-        if (idx == 0) {
-            $('.notice_area').show()
-            $('.gallery_area').hide()
-        } else {
-            $('.notice_area').hide()
-            $('.gallery_area').show()
-        }
-
+        // 누른 탭의 idx와 같은 div를 보여주고 다른것은 숨긴다.
+        $('.tab_content_area div').eq(idx).show()
+        $('.tab_content_area div').eq(idx).siblings().hide()
     })
     
     /* Layer PopUp */
